@@ -1,0 +1,47 @@
+fufeng@magic ~/D/mysql>brew install llvm                                                                                                   1
+==> Downloading https://mirrors.ustc.edu.cn/homebrew-bottles/python%403.10-3.10.4.monterey.bottle.tar.gz
+######################################################################## 100.0%
+==> Downloading https://mirrors.ustc.edu.cn/homebrew-bottles/llvm-13.0.1_1.monterey.bottle.tar.gz
+######################################################################## 100.0%
+==> Installing dependencies for llvm: python@3.10
+==> Installing llvm dependency: python@3.10
+==> Pouring python@3.10-3.10.4.monterey.bottle.tar.gz
+==> /usr/local/Cellar/python@3.10/3.10.4/bin/python3 -m ensurepip
+==> /usr/local/Cellar/python@3.10/3.10.4/bin/python3 -m pip install -v --no-deps --no-index --upgrade --isolated --target=/usr/local/lib/pyth
+🍺  /usr/local/Cellar/python@3.10/3.10.4: 3,138 files, 56.6MB
+==> Installing llvm
+==> Pouring llvm-13.0.1_1.monterey.bottle.tar.gz
+==> Caveats
+To use the bundled libc++ please add the following LDFLAGS:
+  LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+
+llvm is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have llvm first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find llvm you may need to set:
+  export LDFLAGS="-L/usr/local/opt/llvm/lib"
+  export CPPFLAGS="-I/usr/local/opt/llvm/include"
+
+==> Summary
+🍺  /usr/local/Cellar/llvm/13.0.1_1: 5,449 files, 940.9MB
+==> Running `brew cleanup llvm`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Caveats
+==> llvm
+To use the bundled libc++ please add the following LDFLAGS:
+  LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+
+llvm is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have llvm first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find llvm you may need to set:
+  export LDFLAGS="-L/usr/local/opt/llvm/lib"
