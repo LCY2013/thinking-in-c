@@ -17,7 +17,7 @@
 __attribute__((unused)) int method_three() {
     union {
         struct {
-            char a:1; //定义位域为 1 bit[不知位域何物，还请先自行查阅一下，后续文章也会专门讲到]
+            char a:1; //定义位域为 1 bit
         } s;
         char b;
     } data;
