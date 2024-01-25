@@ -40,6 +40,14 @@ int foo_param(int x, int y, Point* p, int(*handler)(int)) {
 //实际上，在 x86-64 的机器指令中，函数调用是通过 `call` 指令来完成。而每一个函数体在执行完毕后，都需要再通过 `ret` 指令来退出函数的执行，并转移代码执行流程到之前函数调用指令的下一条指令上。
 //![](.img/callret代码执行流程.png)
 
+int bar() {
+    return 10;
+}
+int foo_multi_param(int a, int b, int c, int d, int e, int f, int g, int h) {
+    int n = 10;
+    return n + bar();
+}
+
 // SysV 调用约定中都规定了函数调用时的哪些内容？
 // 参数传递
 //SysV 调用约定的第一个规则是：在调用函数时，对于整型和指针类型的实参，需要分别使用寄存器 rdi、rsi、rdx、rcx、r8、r9，按函数定义时参数从左到右的顺序进行传值。而若一个函数接收的参数超过了 6 个，则余下参数将通过栈内存进行传送。此时，多出来的参数将按照从右往左（RTL）的顺序被逐个压入栈中。关于这一点，你可以通过图 A 右侧第 30 到 40 行红框内的汇编代码得到验证。
